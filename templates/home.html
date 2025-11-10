@@ -1,0 +1,92 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Uy - Renessans{% endblock %}
+
+{% block content %}
+<!-- Uy -->
+
+<section id="team" class="section team-section">
+    <div class="home-container">
+        <div class="text-side">
+            <h1 class="title"> Renessans loyihasiga xush kelibsiz!</h1>
+            <p>
+                “Toshkent irrigatsiya va qishloq xo‘jaligini mexanizatsiyalash muhandislari instituti” milliy tadqiqot universiteti
+                “Ekologiya va Huquq” fakulteti
+                Dasturiy Injiniring yo’nalishi 113-guruh
+                “RENESSANS” jamoasi
+            </p>
+        </div>
+        <div class="image-side">
+            <img src="{% static 'images/university1.jpg' %}" alt="University Image" class="home-image">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Jamoamiz -->
+<section id="team" class="section team-section">
+    <div class="content">
+        <h2>RENESSANS jamoasi a'zolari</h2>
+
+        <div class="team-container">
+            <div class="member">
+                <img src="{% static 'images/image1.jpg' %}" alt="Member 1">
+                <div class="overlay">
+                    <a href="https://t.me/Daminovc" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p class="member-name">Samandar Boymuratov</p>
+            </div>
+            <div class="member">
+                <img src="{% static 'images/image2.jpg' %}" alt="Member 2">
+                <div class="overlay">
+                    <a href="https://t.me/xas4nn" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p class="member-name">Xasan Mamatqulov</p>
+            </div>
+            <div class="member">
+                <img src="{% static 'images/image3.jpg' %}" alt="Member 3">
+                <div class="overlay">
+                    <a href="https://t.me/subxonov_2505" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p class="member-name">Abdurahmon Subxonov</p>
+            </div>
+            <div class="member">
+                <img src="{% static 'images/default.jpg' %}" alt="Member 4">
+                <div class="overlay">
+                    <a href="https://t.me/xon_muhammad" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p class="member-name">Muhammadxon Asrorov</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Topshiriqlar -->
+<section id="tasks" class="section tasks-section">
+    <div class="content">
+        <h2 class="title">
+            <i class="fa-solid fa-list-check" style="margin-right:8px; color:#2196F3;"></i>
+            Topshiriqlar
+        </h2>
+
+        <div class="task-list">
+            {% for task in tasks %}
+            <div class="task-item" style="display:flex; align-items:center; margin-bottom:10px;">
+                <i class="fa-solid fa-book" style="margin-right:8px; color:#2196F3;"></i>
+                <a href="{% url 'task_detail' task.pk %}" class="task-link">{{ task.title }}</a>
+            </div>
+            {% empty %}
+            <p>Hozircha topshiriq mavjud emas.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

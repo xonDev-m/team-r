@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Renessans{% endblock %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> Renessans
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Uy</a></li>
+            <li><a href="#team"><i class="fa-solid fa-users"></i> Jamoamiz</a></li>
+            <li><a href="#tasks"><i class="fa-solid fa-list-check"></i> Topshiriqlar</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="Qidirish..." disabled>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+
+    <!-- JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
