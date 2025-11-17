@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = django-insecure-ayxx-e4&j#uzehpq2=8$dm&wm-!j1)$9e_(b%2okze=8&#4gat
 DEBUG = False
 
-ALLOWED_HOSTS = ['team-r.onrender.com']
+ALLOWED_HOSTS = ['team-r.onrender.com', 'www.team-r.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
