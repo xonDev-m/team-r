@@ -16,7 +16,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['team-r.onrender.com', 'www.team-r.onrender.com', '127.0.0.1']
+=======
+ALLOWED_HOSTS = ['team-r.onrender.com']
+>>>>>>> 3e1b440 (Fixed some Problems)
 
 
 # Application definition
@@ -120,3 +124,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
