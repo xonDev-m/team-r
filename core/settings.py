@@ -6,7 +6,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-ayxx-e4&j#uzehpq2=8$dm&wm-!j1)$9e_(b%2okze=8&#4gat'
 DEBUG = False
 
 ALLOWED_HOSTS = ['team-r.onrender.com']
